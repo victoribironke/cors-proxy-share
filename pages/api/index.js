@@ -16,5 +16,5 @@ export default function handler(req, res, next) {
   } 
   res.setHeader('Access-Control-Allow-Origin', '*');
   res.setHeader('Content-Type', 'application/json');
-  getURI(JSON.parse(req.body)['my-url'])
+  getURI(req.headers.url)
 }
